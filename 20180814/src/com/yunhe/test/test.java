@@ -12,5 +12,7 @@ public class test {
 		
 		System.out.println("鍐呭鍙宠竟");
 		
+		System.out.println("又一次提交");
+		
 	}
 }
