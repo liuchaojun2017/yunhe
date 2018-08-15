@@ -10,6 +10,7 @@ public class test {
 		int a=1;
 		System.out.println(c+a);
 		
+		System.out.println("内容右边");
 		
 	}
 }
