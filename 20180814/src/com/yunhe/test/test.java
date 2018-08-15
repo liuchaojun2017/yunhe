@@ -12,7 +12,11 @@ public class test {
 		
 		System.out.println("内容右边");
 		
-		System.out.println("��һ���ύ");
+		System.out.println("喊得不是");
+		
+//		最新添加的内容
+		
+		System.out.println("内容保持最新");
 		
 	}
 }
