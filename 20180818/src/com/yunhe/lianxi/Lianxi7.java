@@ -21,7 +21,6 @@ public class Lianxi7 {
 				System.out.println(i);
 				count++;
 			}
-			
 		}
 		System.out.println("水仙花数的个数："+count);
 	}
