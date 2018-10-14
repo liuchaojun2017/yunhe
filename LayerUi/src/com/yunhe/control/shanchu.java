@@ -1,23 +1,29 @@
-package com.yunhe.show;
+package com.yunhe.control;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+import com.yunhe.daoImpl.DBookManagerImpl;
+
 /**
- * Servlet implementation class Showbook
+ * Servlet implementation class shanchu
  */
-@WebServlet("/Showbook")
-public class Showbook extends HttpServlet {
+@WebServlet("/shanchu")
+public class shanchu extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Showbook() {
+    public shanchu() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,7 +41,21 @@ public class Showbook extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		String id1 = request.getParameter("id");
+	     System.out.println(id1);
+	        response.setStatus(200);
+	    
+	        int x=   new DBookManagerImpl().shanchuByid(Integer.parseInt(id1));
+	       
+
+	        Map jsonObject = new HashMap();
+	        jsonObject.put("state",x>0?true:false);
+	        jsonObject.put("code",0);
+	        jsonObject.put("msg","null");
+	        
+	        Gson gson = new Gson();
+	        response.getWriter().print(gson.toJson(jsonObject));
+		
 	}
 
 }
