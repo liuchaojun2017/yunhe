@@ -1,7 +1,8 @@
 package com.yunhe.test;
 
 public class test {
-	public void get(){
-		System.out.println("hah");
+	private void syso() {
+		// TODO Auto-generated method stub
+       //k;kfkf;
 	}
 }
